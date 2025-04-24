@@ -27,7 +27,7 @@ pipeline {
         }
         stage('Checkout') {
             steps {
-                git credentialsId: 'github-token', url: 'https://github.com/tabseer03/Smart-FIR-filing-system.git'
+                git credentialsId: 'github-token', url: 'https://github.com/tabseer03/Smart-FIR-filing-system'
             }
         }
     }
