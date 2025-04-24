@@ -25,5 +25,10 @@ pipeline {
                 sh 'echo "Deploy logic here (e.g., docker run, scp to server)"'
             }
         }
+        stage('Checkout') {
+            steps {
+                git credentialsId: 'github-token', url: 'https://github.com/tabseer03/Smart-FIR-filing-system.git'
+            }
+        }
     }
 }
