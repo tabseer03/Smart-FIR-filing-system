@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Clone') {
             steps {
-                git 'https://github.com/your-username/your-repo.git'
+                git credentialsId: 'github-token', url: 'https://github.com/tabseer03/Smart-FIR-filing-system.git'
             }
         }
 
@@ -23,11 +23,6 @@ pipeline {
         stage('Deploy') {
             steps {
                 sh 'echo "Deploy logic here (e.g., docker run, scp to server)"'
-            }
-        }
-        stage('Checkout') {
-            steps {
-                git credentialsId: 'github-token', url: 'https://github.com/tabseer03/Smart-FIR-filing-system'
             }
         }
     }
